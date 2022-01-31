@@ -15,7 +15,7 @@ import java.util.Random;
 
 	public class barbero {
 		
-		static long startTime = System.nanoTime();
+	static long startTime = System.nanoTime();
 
 	    public static void main(String[] args) throws Exception {
 	    		
@@ -110,14 +110,6 @@ import java.util.Random;
 	    
 	    //ESTO PERTENECE A CROSS VALIDATION
 	    private static Evaluation trainCrossValidation(Instances data) throws Exception {
-
-	    	//###################################################
-	    	
-	        //Hay que ver donde esta la clase en el .arff, si esta al final:
-            data.setClassIndex(data.numAttributes() -1);
-            
-            //Si no esta al final y por lo contrario esta al principio:
-            data.setClassIndex(0);      
 
 	        //###################################################
             
