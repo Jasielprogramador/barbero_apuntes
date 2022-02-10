@@ -39,6 +39,7 @@ public class holdOutNaive {
 		filteRemovePercentage.setPercentage(30);
 		filteRemovePercentage.setInvertSelection(true);
 		Instances test=Filter.useFilter(randomDataInstances, filteRemovePercentage);
+		test.setClassIndex(test.numAttributes() - 1);
 		
 		NaiveBayes modelBayes = new NaiveBayes();
 		modelBayes.buildClassifier(traInstances);
