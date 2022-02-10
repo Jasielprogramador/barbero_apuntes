@@ -38,6 +38,7 @@ public class holdOutOneR {
 		filteRemovePercentage.setPercentage(30);
 		filteRemovePercentage.setInvertSelection(true);
 		Instances test = Filter.useFilter(randomDataInstances, filteRemovePercentage);
+		test.setClassIndex(test.numAttributes() - 1);
 		
 		OneR modeOneR = new OneR();
 		modeOneR.buildClassifier(traInstances);
