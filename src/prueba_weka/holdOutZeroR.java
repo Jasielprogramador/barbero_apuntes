@@ -37,6 +37,7 @@ public class holdOutZeroR {
 		filteRemovePercentage.setPercentage(30);
 		filteRemovePercentage.setInvertSelection(true);
 		Instances test = Filter.useFilter(randomDataInstances, filteRemovePercentage);
+		test.setClassIndex(test.numAttributes() - 1);
 		
 		ZeroR modelR = new ZeroR();
 		modelR.buildClassifier(traInstances);
